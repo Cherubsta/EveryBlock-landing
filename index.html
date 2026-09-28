@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
   <title>EveryBlock Foods</title>
 
   <link
@@ -11,10 +13,54 @@
     rel="stylesheet"
   >
 
+  <link
+    rel="preload"
+    href="assets/COOPBL.TTF"
+    as="font"
+    type="font/ttf"
+    crossorigin
+  >
+
+  <link
+    rel="preload"
+    href="assets/hero.webp"
+    as="image"
+    media="(min-width: 768px)"
+  >
+
+  <link
+    rel="preload"
+    href="assets/hero-sm.webp"
+    as="image"
+    media="(max-width: 767.98px)"
+  >
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+  
   <link rel="stylesheet" href="main.css">
+
+  <!-- MailerLite Universal -->
+  <script>
+    (function(w,d,e,u,f,l,n){
+      w[f]=w[f]||function(){
+        (w[f].q=w[f].q||[]).push(arguments);
+      },
+      l=d.createElement(e),
+      l.async=1,
+      l.src=u,
+      n=d.getElementsByTagName(e)[0],
+      n.parentNode.insertBefore(l,n);
+    })
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+
+    ml('account', '2665161');
+  </script>
 </head>
 
 <body>
+
+  <div id="page-loader" aria-hidden="true"></div>
 
   <!-- HEADER -->
   <header class="site-header">
@@ -26,8 +72,8 @@
         alt="EveryBlock Foods"
         draggable="false"
       >
+    </div>
   </header>
-
 
   <!-- HERO -->
   <section class="hero">
@@ -84,10 +130,10 @@
   </section>
 
   <!-- INTERIOR IMAGE -->
-  <section class="interior-section reveal">
+  <section class="interior-section">
     <div class="interior-overlay"></div>
 
-    <div class="container interior-content">
+    <div class="container interior-content reveal">
       <div class="row">
         <div class="col-lg-7">
           <p class="eyebrow">YOUR NEIGHBORHOOD MARKET</p>
@@ -106,6 +152,42 @@
     </div>
   </section>
 
+  <!-- NEIGHBORHOOD FIT -->
+  <section class="host-section">
+    <div class="container reveal">
+
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-5">
+
+          <p class="eyebrow">DESIGNED FOR NEIGHBORHOODS</p>
+
+          <h2>
+            Made to fit<br>
+            right in.
+          </h2>
+
+          <p class="host-copy">
+            EveryBlock's small footprint brings fresh food and everyday
+            essentials closer to home — fitting naturally into the places
+            people already live, work and gather.
+          </p>
+
+        </div>
+
+        <div class="col-lg-7">
+          <img
+            src="assets/host.webp"
+            alt="EveryBlock Foods within walking distance of homes, apartments and neighborhood amenities"
+            class="img-fluid host-image"
+            loading="lazy"
+          >
+        </div>
+
+      </div>
+
+    </div>
+  </section>
 
   <!-- HOW IT WORKS -->
   <section class="how-it-works">
@@ -203,14 +285,25 @@
   <!-- BRAND / MISSION -->
   <section class="mission-section">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 text-center">
+      <div class="row align-items-center g-5">
 
+        <!-- Graphic -->
+        <div class="col-lg-7 order-2 order-lg-1">
+          <img
+            src="assets/cityblock.webp"
+            alt="EveryBlock neighborhood illustration"
+            class="mission-image img-fluid"
+            loading="lazy"
+          >
+        </div>
+
+        <!-- Copy -->
+        <div class="col-lg-5 order-1 order-lg-2">
           <p class="eyebrow">EVERYBLOCK FOODS</p>
 
           <h2>
             The convenience store,
-            reconsidered.
+            reimagined.
           </h2>
 
           <p class="mission-copy">
@@ -218,16 +311,15 @@
             fresh food and everyday essentials — designed to fit
             naturally into the communities they serve.
           </p>
-
         </div>
+
       </div>
     </div>
   </section>
 
-
   <!-- FOUNDER -->
-  <section class="founder-section reveal">
-    <div class="container">
+  <section class="founder-section">
+    <div class="container reveal">
       <div class="row align-items-center g-5">
 
         <div class="col-md-5">
@@ -239,18 +331,14 @@
         </div>
 
         <div class="col-md-7">
-
           <p class="eyebrow">WHY EVERYBLOCK</p>
-
           <blockquote>
             “We want good food to feel like part of the neighborhood —
             not something you have to go out of your way for.”
           </blockquote>
-
           <p class="founder-name">
             Chris Mutty — Founder
           </p>
-
         </div>
 
       </div>
@@ -260,36 +348,50 @@
 
   <!-- FINAL CTA -->
   <section class="final-cta" id="signup">
-    <div class="container text-center">
-
+    <div class="container text-center final-cta-content">
       <p class="eyebrow eyebrow-light">COMING SOON</p>
-
       <h2>
-        Good food is getting closer.
+        Good food is<br>
+        getting closer.
       </h2>
 
-      <p>
-        Follow the journey and be the first to know when
-        EveryBlock opens near you.
-      </p>
-
-      <div class="d-flex justify-content-center flex-wrap gap-3 mb-4">
+      <div class="final-cta-actions">
         <a href="#" class="btn btn-cream btn-lg">
           Back us on Kickstarter
         </a>
-      </div>
 
-      <button
-        type="button"
-        class="hero-updates-link"
-        data-bs-toggle="modal"
-        data-bs-target="#updatesModal"
-      >
-        Get launch updates <span class="link-arrow">→</span>
-      </button>
+        <button
+          type="button"
+          class="hero-updates-link"
+          data-bs-toggle="modal"
+          data-bs-target="#updatesModal"
+        >
+          Get launch updates <span class="link-arrow">→</span>
+        </button>
+
+      </div>
 
     </div>
   </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+
+        <span class="footer-copy">
+          © 2026 EveryBlock Foods
+        </span>
+
+        <a
+          class="footer-contact"
+          href="mailto:cmutty@everyblockfoods.com?subject=Hello%20EveryBlock%20Foods"
+        >
+          Get in touch <span class="footer-contact-icon">👋</span>
+        </a>
+
+      </div>
+    </div>
+  </footer>
 
   <!-- UPDATES MODAL -->
   <div
@@ -308,54 +410,23 @@
           aria-label="Close"
         ></button>
 
-        <div class="modal-body text-center">
+        <div class="modal-body updates-modal-body">
 
-          <img
-            src="assets/badge-green.svg"
-            class="modal-badge"
-            alt=""
-          >
+          <p class="eyebrow">STAY IN THE LOOP</p>
 
-          <h2>Stay in the loop.</h2>
+          <h2>Good things are coming.</h2>
 
-          <p>
-            Be the first to hear about new locations,
-            opening dates and what we're building next.
+          <p class="updates-modal-copy">
+            Be the first to hear about new locations, opening dates
+            and what we're building next.
           </p>
 
-          <!-- MailerLite form will go here -->
-          <form class="updates-form">
-
-            <input
-              type="email"
-              class="form-control form-control-lg"
-              placeholder="Your email address"
-              required
-            >
-
-            <button
-              type="submit"
-              class="btn btn-primary-brand btn-lg w-100"
-            >
-              Keep me posted
-            </button>
-
-          </form>
-
-          <small>
-            No spam. Just the good stuff.
-          </small>
+          <div class="ml-embedded" data-form="WFeTUR"></div>
 
         </div>
       </div>
     </div>
   </div>
-
-  <footer>
-    <div class="container text-center">
-      © 2026 EveryBlock Foods
-    </div>
-  </footer>
 
   <!-- Logo previews -->
   <script>
@@ -393,6 +464,27 @@
 
     revealElements.forEach((element) => {
       revealObserver.observe(element);
+    });
+  </script>
+
+  <script>
+    Promise.all([
+      document.fonts.ready,
+      new Promise(resolve => {
+        if (document.readyState === "complete") {
+          resolve();
+        } else {
+          window.addEventListener("load", resolve, { once: true });
+        }
+      })
+    ]).then(() => {
+      const loader = document.getElementById("page-loader");
+
+      loader.classList.add("is-ready");
+
+      loader.addEventListener("transitionend", () => {
+        loader.remove();
+      }, { once: true });
     });
   </script>
 
