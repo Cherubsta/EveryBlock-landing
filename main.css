@@ -149,7 +149,7 @@ p {
   background: none;
   border: 0;
   padding: .4rem 0;
-  color: var(--cream);
+  color: #fff;
   font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
@@ -190,7 +190,7 @@ p {
 .btn-primary-brand {
   background: var(--cream);
   color: var(--green);
-  border: 1px solid var(--cream);
+  border: 2px solid var(--cream);
 }
 
 .btn-primary-brand:hover,
@@ -206,7 +206,7 @@ p {
 .btn-cream {
   background: var(--cream);
   color: var(--green);
-  border: 1px solid var(--cream);
+  border: 2px solid var(--cream);
 }
 
 .btn-cream:hover,
@@ -717,6 +717,11 @@ blockquote {
 
   .brand-badge {
     margin-bottom: 2.5rem;
+  }
+
+  .hero-actions .btn-primary,
+  .final-cta-actions .btn-primary {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
   }
 
   /* HOSTS */
