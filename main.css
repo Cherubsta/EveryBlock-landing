@@ -757,7 +757,6 @@ blockquote {
   .phone-wrap {
     padding: 2.5rem 0.1rem 0;
     margin-bottom: 1.5rem;
-    overflow: visible;
   }
 
   .feature-heading {
@@ -766,9 +765,8 @@ blockquote {
     gap: .75rem;
   }
 
-  .feature-heading .feature-number {
-    flex: 0 0 auto;
-    margin: 0;
+  .feature-number {
+    display: none;
   }
 
   .feature-heading h3 {
