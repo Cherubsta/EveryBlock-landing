@@ -86,9 +86,15 @@
           </p>
 
           <div class="d-flex flex-wrap gap-3 hero-actions">
-            <a href="#" class="btn btn-primary-brand btn-lg">
-              Back us on Kickstarter
-            </a>
+            <button
+              type="button"
+              class="btn btn-primary-brand btn-lg kickstarter-cta"
+              data-bs-toggle="modal"
+              data-bs-target="#kickstarterModal"
+            >
+              <span class="kickstarter-label">Back us on Kickstarter</span>
+              <span class="kickstarter-subtext">Help build the first EveryBlock</span>
+            </button>
 
             <button
               type="button"
@@ -98,7 +104,6 @@
             >
               Get launch updates <span class="link-arrow">→</span>
             </button>
-
           </div>
         </div>
       </div>
@@ -129,15 +134,12 @@
     <div class="container interior-content reveal">
       <div class="row">
         <div class="col-lg-7">
-          <p class="eyebrow">YOUR NEIGHBORHOOD MARKET</p>
-
           <h2>
             Small footprint.<br>
             Everything you need.
           </h2>
-
           <p>
-            Fresh food, everyday essentials and a simpler way to shop —
+            Fresh food, everyday essentials, and a simpler way to shop —
             all packed into one convenient neighborhood store.
           </p>
         </div>
@@ -145,40 +147,38 @@
     </div>
   </section>
 
-  <!-- NEIGHBORHOOD FIT -->
-  <section class="host-section">
-    <div class="container reveal">
-
+  <!-- BRAND / MISSION -->
+  <section class="mission-section">
+    <div class="container">
       <div class="row align-items-center g-5">
 
-        <div class="col-lg-5">
-
-          <p class="eyebrow">DESIGNED FOR NEIGHBORHOODS</p>
-
-          <h2>
-            Made to fit<br>
-            right in.
-          </h2>
-
-          <p class="host-copy">
-            EveryBlock's small footprint brings fresh food and everyday
-            essentials closer to home — fitting naturally into the places
-            people already live, work and gather.
-          </p>
-
-        </div>
-
-        <div class="col-lg-7">
+        <!-- Graphic -->
+        <div class="col-lg-7 order-2 order-lg-1">
           <img
-            src="assets/host.webp"
-            alt="EveryBlock Foods within walking distance of homes, apartments and neighborhood amenities"
-            class="img-fluid host-image"
+            src="assets/cityblock.webp"
+            alt="EveryBlock neighborhood illustration"
+            class="mission-image img-fluid"
             loading="lazy"
           >
         </div>
 
-      </div>
+        <div class="col-lg-5 order-1 order-lg-2">
+          <p class="eyebrow">EVERYBLOCK FOODS</p>
 
+          <h2>
+            The convenience store, reimagined.
+          </h2>
+
+          <p class="mission-copy">
+            We’re building small, self-service neighborhood markets stocked with fresh food and everyday essentials.
+          </p>
+
+          <div class="value-strip">
+            <span>Nearby</span>
+            <span>Open late</span>
+            <span>Scan &amp; go</span>
+          </div>
+        </div>
     </div>
   </section>
 
@@ -274,39 +274,44 @@
     </div>
   </section>
 
+  <!-- NEIGHBORHOOD FIT -->
+  <section class="host-section">
+    <div class="container reveal">
 
-  <!-- BRAND / MISSION -->
-  <section class="mission-section">
-    <div class="container">
       <div class="row align-items-center g-5">
 
-        <!-- Graphic -->
-        <div class="col-lg-7 order-2 order-lg-1">
+        <div class="col-lg-5">
+
+          <p class="eyebrow">HOST AN EVERYBLOCK</p>
+
+          <h2>
+            Made to fit<br>right in.
+          </h2>
+
+          <p class="host-copy">
+            EveryBlock turns a small footprint into a neighborhood amenity. It brings fresh goods and everyday essentials closer to residents, workers, and communities with limited nearby grocery access.
+          </p>
+          
+          <a
+            class="host-cta"
+            href="mailto:cmutty@everyblockfoods.com?subject=Interested%20in%20hosting%20an%20EveryBlock&body=Hi%20Chris%2C%0A%0AI%27m%20interested%20in%20learning%20more%20about%20hosting%20an%20EveryBlock%20Foods%20location.%0A%0AName%3A%0AEmail%3A%0AProperty%20%2F%20organization%3A%0AProperty%20location%3A%0AAnything%20else%20you%27d%20like%20us%20to%20know%3A%0A%0AThanks%21"
+          >
+            Host an EveryBlock <span class="link-arrow">→</span>
+          </a>
+
+        </div>
+
+        <div class="col-lg-7">
           <img
-            src="assets/cityblock.webp"
-            alt="EveryBlock neighborhood illustration"
-            class="mission-image img-fluid"
+            src="assets/host.webp"
+            alt="EveryBlock Foods within walking distance of homes, apartments, and neighborhood amenities"
+            class="img-fluid host-image"
             loading="lazy"
           >
         </div>
 
-        <!-- Copy -->
-        <div class="col-lg-5 order-1 order-lg-2">
-          <p class="eyebrow">EVERYBLOCK FOODS</p>
-
-          <h2>
-            The convenience store,
-            reimagined.
-          </h2>
-
-          <p class="mission-copy">
-            We're creating small neighborhood markets filled with
-            fresh food and everyday essentials — designed to fit
-            naturally into the communities they serve.
-          </p>
-        </div>
-
       </div>
+
     </div>
   </section>
 
@@ -326,8 +331,7 @@
         <div class="col-md-7">
           <p class="eyebrow">WHY EVERYBLOCK</p>
           <blockquote>
-            “We want good food to feel like part of the neighborhood —
-            not something you have to go out of your way for.”
+            “Good food should be convenient, reliable, and affordable. We believe it should be a part of every neighborhood.”
           </blockquote>
           <p class="founder-name">
             Chris Mutty — Founder
@@ -342,16 +346,29 @@
   <!-- FINAL CTA -->
   <section class="final-cta" id="signup">
     <div class="container text-center final-cta-content">
+
       <p class="eyebrow eyebrow-light">COMING SOON</p>
+
       <h2>
         Good food is<br>
         getting closer.
       </h2>
 
+      <p class="final-cta-copy">
+        Help us bring the first EveryBlock neighborhood market to life.
+      </p>
+
       <div class="final-cta-actions">
-        <a href="#" class="btn btn-cream btn-lg">
-          Back us on Kickstarter
-        </a>
+
+        <button
+          type="button"
+          class="btn btn-primary-brand btn-lg kickstarter-cta"
+          data-bs-toggle="modal"
+          data-bs-target="#kickstarterModal"
+        >
+          <span class="kickstarter-label">Coming to Kickstarter</span>
+          <span class="kickstarter-subtext">Help build the first EveryBlock</span>
+        </button>
 
         <button
           type="button"
@@ -410,13 +427,59 @@
           <h2>Good things are coming.</h2>
 
           <p class="updates-modal-copy">
-            Be the first to hear about new locations, opening dates
+            Be the first to hear about new locations, opening dates,
             and what we're building next.
           </p>
 
           <div class="ml-embedded" data-form="WFeTUR"></div>
 
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kickstarter Coming Soon Modal -->
+  <div
+    class="modal fade"
+    id="kickstarterModal"
+    tabindex="-1"
+    aria-labelledby="kickstarterModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content updates-modal">
+
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+
+        <div class="modal-body updates-modal-body">
+
+          <p class="eyebrow">KICKSTARTER</p>
+
+          <h2 id="kickstarterModalLabel">
+            We're almost ready.
+          </h2>
+
+          <p class="updates-modal-copy">
+            Our Kickstarter campaign is coming soon. Join the list and
+            we'll let you know when it goes live.
+          </p>
+
+          <button
+            type="button"
+            class="btn btn-primary-brand kickstarter-modal-btn"
+            data-bs-target="#updatesModal"
+            data-bs-toggle="modal"
+          >
+            Let me know when it launches
+          </button>
+
+        </div>
+
       </div>
     </div>
   </div>
@@ -428,7 +491,9 @@
     const logos = [
       "assets/logo.png",
       "assets/logo-alt1.png",
-      "assets/logo-alt2.png"
+      "assets/logo-alt2.png",
+      "assets/logo-alt3.png",
+      "assets/logo-alt4.png"
     ];
 
     let currentLogo = 0;

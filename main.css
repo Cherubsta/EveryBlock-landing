@@ -173,7 +173,6 @@ p {
 }
 
 /* BUTTONS */
-
 .btn {
   border-radius: 999px;
   padding: .85rem 1.6rem;
@@ -181,7 +180,9 @@ p {
   transition:
     background-color .2s ease,
     color .2s ease,
-    border-color .2s ease;
+    border-color .2s ease,
+    box-shadow .2s ease,
+    transform .2s ease;
 }
 
 
@@ -200,22 +201,51 @@ p {
   border-color: var(--cream);
 }
 
-
-/* CREAM BUTTON */
-
-.btn-cream {
-  background: var(--cream);
-  color: var(--green);
-  border: 2px solid var(--cream);
+/* KICKSTARTER CTA */
+.kickstarter-cta {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .35rem;
+  min-width: 320px;
+  padding: .9rem 2.4rem;
+  line-height: 1;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .16);
 }
 
-.btn-cream:hover,
-.btn-cream:focus-visible {
+.kickstarter-cta:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .20);
+  transform: translateY(-1px);
+}
+
+.kickstarter-label {
+  font-size: 1rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.kickstarter-subtext {
+  font-size: .89rem;
+  font-weight: 400;
+  opacity: .82;
+  letter-spacing: .01em;
+  white-space: nowrap;
+  padding-top: 0.4rem;
+}
+
+.kickstarter-modal-btn {
   background: var(--green);
   color: var(--cream);
-  border-color: var(--cream);
+  border-color: var(--green);
 }
 
+.kickstarter-modal-btn:hover,
+.kickstarter-modal-btn:focus-visible {
+  background: transparent;
+  color: var(--green);
+  border-color: var(--green);
+}
 
 /* INTERLUDE */
 .brand-break {
@@ -284,6 +314,25 @@ p {
   font-size: 1.15rem;
 }
 
+.value-strip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .65rem 1rem;
+  margin-top: 2rem;
+  color: var(--green);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.value-strip span:not(:last-child)::after {
+  content: "•";
+  margin-left: 1rem;
+  opacity: .4;
+}
+
 
 /* HOSTS */
 .host-section {
@@ -310,6 +359,31 @@ p {
   display: block;
   width: 100%;
   height: auto;
+}
+.host-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  margin-top: .75rem;
+  padding: 0;
+  color: var(--green);
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.host-cta .link-arrow {
+  transition: transform .2s ease;
+}
+
+.host-cta:hover,
+.host-cta:focus-visible {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.host-cta:hover .link-arrow,
+.host-cta:focus-visible .link-arrow {
+  transform: translateX(4px);
 }
 
 /* HOW IT WORKS */
@@ -422,6 +496,11 @@ blockquote {
 
   background: var(--green);
   color: var(--cream);
+}
+
+.final-cta-copy {
+  max-width: 34rem;
+  margin: 1.5rem auto 2rem;
 }
 
 /* FINAL CTA */
