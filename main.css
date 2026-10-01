@@ -317,19 +317,23 @@ p {
 .value-strip {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: .65rem 1rem;
+  flex-wrap: nowrap;
+  gap: .65rem;
   margin-top: 2rem;
   color: var(--green);
-  font-size: .75rem;
+  font-size: .65rem;
   font-weight: 700;
-  letter-spacing: .06em;
+  letter-spacing: .05em;
   text-transform: uppercase;
+}
+
+.value-strip span {
+  white-space: nowrap;
 }
 
 .value-strip span:not(:last-child)::after {
   content: "•";
-  margin-left: 1rem;
+  margin-left: .65rem;
   opacity: .4;
 }
 
@@ -879,6 +883,11 @@ blockquote {
   .mission-image {
     margin-top: 1rem;
     width: 100%;
+  }
+
+  .value-strip {
+    flex-wrap: wrap;
+    gap: .65rem 1rem;
   }
 
   .final-cta {
