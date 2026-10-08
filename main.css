@@ -8,9 +8,9 @@
 
 :root {
   /*--green: #2f742b;*/
-  --green: #153e2b;
+  --green: #153E2B; 
   --cream: #FFFBE7;
-  --orange: #f47b20;
+  --orange: #E8560C;
   --ink: #1a1a18;
 
   --font-display: "Cooper Black", Georgia, serif;
@@ -119,10 +119,11 @@ p {
 }
 
 .hero-title {
-  font-size: clamp(4rem, 7.0vw, 7.2rem);
+  font-size: clamp(4rem, 6.5vw, 7.2rem);
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
   line-height: .88;
   margin-bottom: 2rem;
+  opacity: 0.9;
 }
 
 .hero-content {
@@ -186,15 +187,14 @@ p {
 }
 
 .btn-primary-brand {
-  background: var(--green);
+  background: var(--orange);
   color: var(--cream);
-  border: 2px solid var(--cream);
 }
 
 .btn-primary-brand:hover,
 .btn-primary-brand:focus-visible {
-  background: var(--cream);
-  color: var(--green);
+  background: var(--orange);
+  opacity: 0.7;
   border-color: var(--cream);
 }
 
@@ -213,7 +213,6 @@ p {
 
 .kickstarter-cta:hover {
   box-shadow: 0 6px 18px rgba(0, 0, 0, .20);
-  transform: translateY(-1px);
 }
 
 .kickstarter-label {
@@ -561,8 +560,8 @@ blockquote {
 
 .final-cta .btn-primary-brand:hover,
 .final-cta .btn-primary-brand:focus-visible {
-  background: var(--green);
-  color: var(--cream);
+  background: var(--cream);
+  opacity: 0.6;
   border-color: var(--cream);
 }
 
