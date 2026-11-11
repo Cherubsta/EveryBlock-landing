@@ -403,8 +403,8 @@ p {
 }
 
 .phone-wrap {
-  background: rgba(214, 223, 194, 1);
-  border-radius: 70px;
+  background: rgba(214, 223, 194, .5);
+  border-radius: 55px;
   padding: 2rem 2rem 0;
   margin-bottom: 2rem;
   overflow: hidden;
@@ -459,7 +459,6 @@ p {
 }
 
 /* FOUNDER */
-
 .founder-section {
   padding: 8rem 0;
   background: #ece8dc;
@@ -482,6 +481,94 @@ blockquote {
 .founder-name {
   margin-top: 2rem;
   font-weight: 600;
+}
+
+
+/* FOUNDER VIDEO */
+.founder-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #111;
+}
+
+.founder-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 28px;
+  overflow: hidden;
+  background: transparent;
+  isolation: isolate;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.founder-video-trigger {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.founder-video-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.founder-video-trigger:hover .founder-video-thumbnail {
+  transform: scale(1.03);
+}
+
+.founder-video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
+  background: none;
+  color: rgba(255, 255, 255, 0.85);
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
+  transition: transform 0.2s ease;
+}
+
+.founder-video-trigger:hover .founder-video-play {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.founder-video-trigger:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: -5px;
+}
+
+.founder-video video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border: 0;
+  background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .founder-video-thumbnail,
+  .founder-video-play {
+    transition: none;
+  }
 }
 
 /* FINAL CTA */
@@ -638,7 +725,6 @@ blockquote {
   transform: translateY(0);
 }
 
-
 /* Stagger app cards on desktop only */
 @media (min-width: 768px) {
 
@@ -652,7 +738,6 @@ blockquote {
 
 }
 
-
 /* Accessibility */
 @media (prefers-reduced-motion: reduce) {
 
@@ -663,7 +748,6 @@ blockquote {
   }
 
 }
-
 
 /* FOOTER */
 .site-footer {
@@ -768,7 +852,6 @@ blockquote {
   }
 
   /* SUPPORTING COPY */
-
   .hero-copy {
     font-size: 1.65rem;
     max-width: 21rem;
