@@ -489,22 +489,14 @@ blockquote {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  border-radius: 28px;
-  overflow: hidden;
-  background: #111;
-}
-
-.founder-video {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 28px;
+  border-radius: 18px;
   overflow: hidden;
   background: transparent;
   isolation: isolate;
   -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
+/* Thumbnail */
 .founder-video-trigger {
   display: block;
   position: relative;
@@ -528,6 +520,7 @@ blockquote {
   transform: scale(1.03);
 }
 
+/* Play button */
 .founder-video-play {
   position: absolute;
   top: 50%;
@@ -553,6 +546,7 @@ blockquote {
   outline-offset: -5px;
 }
 
+/* Video player */
 .founder-video video {
   position: absolute;
   inset: 0;
@@ -560,14 +554,88 @@ blockquote {
   height: 100%;
   display: block;
   object-fit: cover;
-  border: 0;
-  background: transparent;
+  cursor: pointer;
 }
 
+
+/* Minimal playback controls */
+
+.founder-controls {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 32px 14px 12px;
+  background: linear-gradient(
+    transparent,
+    rgba(0, 0, 0, 0.55)
+  );
+  color: white;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 5;
+}
+
+.founder-controls.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.founder-controls-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.founder-toggle,
+.founder-fullscreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.founder-fullscreen {
+  margin-left: auto;
+}
+
+.founder-time {
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.founder-progress {
+  height: 3px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.founder-progress-fill {
+  height: 100%;
+  width: 0;
+  background: white;
+}
+
+/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
   .founder-video-thumbnail,
   .founder-video-play {
     transition: none;
+  }
+
+  .founder-video-trigger:hover .founder-video-thumbnail {
+    transform: none;
+  }
+
+  .founder-video-trigger:hover .founder-video-play {
+    transform: translate(-50%, -50%);
   }
 }
 
