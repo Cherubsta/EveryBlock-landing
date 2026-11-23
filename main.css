@@ -871,6 +871,10 @@ blockquote {
     box-sizing: border-box;
   }
 
+  .header-logo {
+    max-height: 60px;
+  }
+
   .hero {
     min-height: calc(
       100svh - 100px - env(safe-area-inset-top)
