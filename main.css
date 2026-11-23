@@ -87,7 +87,7 @@ p {
 }
 
 .header-logo {
-  max-height: 48px;
+  max-height: 52px;
   cursor: pointer;
   user-select: none;
   -webkit-user-drag: none;
